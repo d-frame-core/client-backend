@@ -5,7 +5,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [ConfigModule.forRoot({isGlobal: true}), MongooseModule.forRoot(process.env.MONGO_URL)],
+  imports: [ConfigModule.forRoot({isGlobal: true}), MongooseModule.forRoot("mongodb://localhost:27017")],
   controllers: [AppController],
   providers: [AppService],
 })
